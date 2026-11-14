@@ -5,7 +5,7 @@ This repository provides a customized Lambda v1 rom that can be used on a real Z
 The customized ROMs together with latest OpenSpand firmware 0.51.4 or higher, and they provides together the following features:
 
 ## Plain ZX81 only
-* Lambda 8300 rom v1 customized for ZX81 hardware (starts up with blinking cursor only), 
+* Lambda 8300 rom v1 customized for ZX81 hardware (starts up with blinking cursor only). (Lambda 8300 rom v2 might come later)
 
 ## With OpenSpand interface
 * Overlay adding support for CAT and LOAD of programs from OpenSpand SD Card storage
@@ -47,3 +47,6 @@ Now assemble your setup and put the SD Card into the interface and power up. Whe
 
 # My current setup - ZX81, OpenSpand running a game for Lambda 8300
 <img width="960" height="1280" alt="IMG_0064 Large" src="https://github.com/user-attachments/assets/be6d4ea6-52fa-48b9-a510-a5d7b6f7470e" />
+
+# TECHNICAL NOTE - Why a 16KB ROM?
+As the Lambda 8300 does NOT provide character bitmaps from the ROM, but the ULA, the 512 bytes used for this in the ZX81 has been used for actual code. The 512 bytes table needs to be somewhere in the ROM, in order to display the characters correct. Also the ZX81 needs some additional code during start up to initialize this properly, which has been placed in the upper 8K of the ROM. Doing this the changes to the Lambda rom can be at a minimum, which ensures compatibility with most programs that relies on the ROM content (calling known ROM functions for example).
