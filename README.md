@@ -50,3 +50,11 @@ Now assemble your setup and put the SD Card into the interface and power up. Whe
 
 # TECHNICAL NOTE - Why a 16KB ROM?
 As the Lambda 8300 does NOT provide character bitmaps from the ROM, but the ULA, the 512 bytes used for this in the ZX81 has been used for actual code. The 512 bytes table needs to be somewhere in the ROM, in order to display the characters correct. Also the ZX81 needs some additional code during start up to initialize this properly, which has been placed in the upper 8K of the ROM. Doing this the changes to the Lambda rom can be at a minimum, which ensures compatibility with most programs that relies on the ROM content (calling known ROM functions for example).
+
+# REFERENCES
+Main source for a lot of inspiration to this work:
+
+* Tynemouth work on getting Lambda rom to run on his [Minstrel 3](https://blog.tynemouthsoftware.co.uk/2019/12/a-minstrel-3-based-clone-of-the-lambda-8300-ZX81-clone.html), including his disassembly of the Lambda v1 rom.
+* ZX81 ROM disassembly by [ZXSpectrumVault](https://github.com/ZXSpectrumVault/rom-disassemblies)
+* Kio's website with also with [Lambda 8300](https://k1.spdns.de/Vintage/Sinclair/80/Clones/Lambda%208300%2C%20Hong%20Kong/)
+* No$Cash documentation, including [Lambda 8300](https://problemkaputt.de/zxdocs.htm)
