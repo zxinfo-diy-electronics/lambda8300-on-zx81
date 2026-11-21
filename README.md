@@ -23,7 +23,7 @@ In order to prepare your setup for running as a Lambda 8300 using OpenSpand
 
 * Copy the zx81*.rom to your SD Card and rename to CUSTOM.COM
 * Copy the zx81*.ovl to your SD Card and rename to CUSTOM.OVL
-* Copy LCMDR.P to your SD Card. This is a cut-down Lambda version of ZXPand Commander. It is not recommended for now to rename this to MENU.P, as starting up as a ZX81 with this can lead to unknown disruptions of the setzup.
+* Copy LCMDR.P to your SD Card. This is a cut-down Lambda version of ZXPand Commander. It is not recommended for now to rename this to MENU.P, as starting up as a ZX81 with this can lead to unknown disruptions of the setup.
 * Eventually copy other programs (in P format) to the SD Card.
 
 Now assemble your setup and put the SD Card into the interface and power up. When ready you need to configure OpenSpand for this setup.
