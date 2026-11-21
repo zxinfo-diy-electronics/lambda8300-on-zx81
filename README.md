@@ -9,6 +9,7 @@ The customized ROMs together with latest OpenSpand firmware 0.51.4 or higher, an
 
 ## With OpenSpand interface
 * Overlay adding support for CAT and LOAD of programs from OpenSpand SD Card storage
+* SAVE'ing to OpenSpand storage using SAVE command
 * Lambda 8300 beeper support
 * Lambda 8300 specific characters, as some of the standard ZX81 has been changed to more gaming oriented.
 * Joystick support via OpenSpand
@@ -47,6 +48,23 @@ Now assemble your setup and put the SD Card into the interface and power up. Whe
 
 # My current setup - ZX81, OpenSpand running a game for Lambda 8300
 <img width="960" height="1280" alt="IMG_0064 Large" src="https://github.com/user-attachments/assets/be6d4ea6-52fa-48b9-a510-a5d7b6f7470e" />
+
+# ERROR CODES
+Lambda 8300 uses two-letter error reporting, these are mapped to the OpenSpand interface to use the corresponding ZX81 one-letter codes:
+
+| ZX81 code | Standard ZX81 report | Lambda 8300 report | OpenSpand error (shown in inverse video) |
+|---|---|---|---|
+| 1 | NEXT without FOR | `NF` Next without For | Fatal disk error |
+| 2 | Variable not found | `UV` Unidentified Variable | Internal error |
+| 3 | Subscript wrong | `BS` Bad Subscript | Not ready (no card) |
+| 4 | Out of memory | `OM` Out of Memory | Not found |
+| 5 | Out of screen | `SF` Screen Full | No path |
+| 6 | Number too big (arithmetic overflow) | `OV` OVerflow | Invalid name |
+| 7 | RETURN without GOSUB | `RG` RETURN without GOSUB | Write protect |
+| 8 | INPUT as a command | `II` Illegal Input | Exists |
+| 9 | STOP statement | `ST` STopped | Boot error |
+| D | BREAK, CONT repeats | `BK` BreaK | No FS |
+| F | No program name supplied | `NA` no program NAme | Timeout |
 
 # TECHNICAL NOTE - Why a 16KB ROM?
 As the Lambda 8300 does NOT provide character bitmaps from the ROM, but the ULA, the 512 bytes used for this in the ZX81 has been used for actual code. The 512 bytes table needs to be somewhere in the ROM, in order to display the characters correct. Also the ZX81 needs some additional code during start up to initialize this properly, which has been placed in the upper 8K of the ROM. Doing this the changes to the Lambda rom can be at a minimum, which ensures compatibility with most programs that relies on the ROM content (calling known ROM functions for example).
