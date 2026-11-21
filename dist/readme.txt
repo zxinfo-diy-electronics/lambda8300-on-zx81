@@ -8,7 +8,7 @@ zx81-16k_lambda8300.rom - Modified Lambda v1 rom to be used on real ZX81 hardwar
 For use on OpenSpand - OpenSpand firmware 0.51.4 or higher is required for this to work.
 --
 zx81-16k_lambda8300.rom - RENAME to CUSTOM.COM and copy to root of SD Card
-zx81-16k_lambda8300-overlay-pasmo.rom - RENAME to CUSTOM.OVL and copy to root of SD Card
+zx81-16k_lambda8300-overlay-pasmo.ovl - RENAME to CUSTOM.OVL and copy to root of SD Card
 
 PROG - test programs for Lambda and OpenSpand.
 --
